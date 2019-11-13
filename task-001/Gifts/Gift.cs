@@ -8,7 +8,7 @@ namespace task_001.Gifts
     {
         public string NameGift { get; set; }
 
-        public int Weight { get; set; }
+        public int WeightGift { get; set; }
 
         public abstract void SortSweets();
 
