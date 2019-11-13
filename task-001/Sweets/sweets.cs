@@ -12,6 +12,5 @@ namespace task_001.Sweets
 
         public int Weight { get; set; }
 
-        public int QuantityInSet { set; get; }
     }
 }
