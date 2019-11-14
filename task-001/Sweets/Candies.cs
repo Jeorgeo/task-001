@@ -6,7 +6,7 @@ namespace task_001.Sweets
 {
     class Candies : Sweets
     {
-        public string CandyType { get; set; }
+        protected string CandyType { get; set; }
 
     }
 }

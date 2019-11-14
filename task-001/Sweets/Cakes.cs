@@ -7,7 +7,7 @@ namespace task_001.Sweets
     class Cakes : Sweets
     {
 
-        public double PalmOil { get; set; }
+        protected double PalmOil { get; private set; }
 
     }
 }

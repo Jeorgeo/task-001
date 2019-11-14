@@ -6,11 +6,11 @@ namespace task_001.Sweets
 {
     abstract class Sweets
     {
-        public string Name { get; set; }
+        public string Name { get; private set; }
 
-        public int SugarAmount { get; set; }
+        public int SugarAmount { get; private set; }
 
-        public int Weight { get; set; }
+        public int Weight { get; private set; }
 
     }
 }

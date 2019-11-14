@@ -6,14 +6,14 @@ namespace task_001.Gifts
 {
     abstract class Gift
     {
-        public string NameGift { get; set; }
+        public string NameGift { get; private set; }
 
-        public int WeightGift { get; set; }
+        public int WeightGift { get; private set; }
 
-        public abstract void SortSweets();
+        protected abstract void SortSweets();
 
-        public abstract void AddSweets();
+        protected abstract void AddSweets();
 
-        public abstract void RemoveSweets();
+        protected abstract void RemoveSweets();
     }
 }
