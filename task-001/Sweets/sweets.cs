@@ -4,7 +4,7 @@ using System.Text;
 
 namespace task_001.Sweets
 {
-    abstract class Sweets
+    public abstract class Sweets
     {
         public string Name { get; private set; }
 

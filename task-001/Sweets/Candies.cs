@@ -4,7 +4,7 @@ using System.Text;
 
 namespace task_001.Sweets
 {
-    class Candies : Sweets
+    public class Candies : Sweets
     {
         protected string CandyType { get; set; }
 

@@ -4,16 +4,14 @@ using System.Text;
 
 namespace task_001.Gifts
 {
-    abstract class Gift
+    public class Gift
     {
         public string NameGift { get; private set; }
 
-        public int WeightGift { get; private set; }
+        public void WeightGift();
 
-        protected abstract void SortSweets();
+        public void SortSweets();
 
-        protected abstract void AddSweets();
-
-        protected abstract void RemoveSweets();
+        public void AddSweets();
     }
 }
