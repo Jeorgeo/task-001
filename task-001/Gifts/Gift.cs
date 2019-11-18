@@ -8,10 +8,13 @@ namespace task_001.Gifts
     {
         public string NameGift { get; private set; }
 
-        public void WeightGift();
+        public void WeightGift() { 
+        
+        
+        }
 
-        public void SortSweets();
+        public void SortSweets() { }
 
-        public void AddSweets();
+        public void AddSweets() { }
     }
 }

@@ -1,12 +1,21 @@
 ﻿using System;
+using task_001.Gifts;
+using task_001.Sweets;
+
 
 namespace task_001
 {
     public class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Console.WriteLine("Hello World!");
+
+            Candies candy = new Candies();
+            candy.DetermineSugarAmount(5, 15);
+
+
         }
+  
     }
+
 }
