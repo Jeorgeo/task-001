@@ -4,33 +4,33 @@ using System.Text;
 
 namespace task_001.Sweets
 {
-    public class Cakes : Sweets
+    public class Cakes : Sweet
     {
-        public string Name { get; private set; }
+        public Cakes(string name, int sugarAmount, int weight)
+        {
+            Name = name;
 
-        public double СarbohydratesAmount { get; private set; }
+            SugarAmount = sugarAmount;
 
-        public double SugarAmount { get; private set; }
+            Weight = weight;
+        }
 
-        public int Weight { get; private set; }
+        enum CakesType {Сookie, Cake, Waffles};
 
-        enum CakesType { Сookie, Cake, Waffles };   
+        public int flourAmount;
 
-        protected double PalmOil { get; private set; }
+        protected int FlourAmount
+        {
+            get; private set;
+        }
 
-        public override void DetermineSugarAmount() {
-
-            var СarbohydratesAmount = Convert.ToDouble(Console.ReadLine());
-            var SugarAmount = Convert.ToDouble(Console.ReadLine());
-            var PalmOil = Convert.ToDouble(Console.ReadLine());
-
-            var Sugar = СarbohydratesAmount * SugarAmount * PalmOil;
-
-            Console.WriteLine(Sugar);
-
-            Console.ReadKey();
-
+        public override void DetermineSugar()
+        {
+            var c = SugarAmount * Weight * 0.7 / 100;
+            Console.WriteLine(c);
         }
 
     }
+        
+    
 }
