@@ -10,9 +10,8 @@ namespace task_001
         static void Main()
         {
 
-            Candies candy = new Candies();
-            candy.DetermineSugarAmount(5, 15);
-
+            Candies candy = new Candies("caramel");
+            candy.DetermineSugarAmount();
 
         }
   

@@ -5,22 +5,15 @@ using task_001.Sweets;
 
 namespace task_001.Sweets
 {
-    public class Candies
+    public class Candies : Sweets
     {
-        public string Name
+        public string Name { get; set; }
+
+        public Candies(string name)
         {
-            get { return Name; }
-
-            private set { Name = value; }
+            Name = name;
         }
-
-        public double СarbohydratesAmount
-        {
-            get { return СarbohydratesAmount; }
-
-            private set { СarbohydratesAmount = value; }
-        }
-
+                
         public double SugarAmount
         {
             get { return SugarAmount; }
@@ -35,29 +28,26 @@ namespace task_001.Sweets
             private set { Weight = value; }
         }
 
-        enum CandyType {Sweetmeat, Chocolate, Marmalade};
-
-        public void DetermineSugarAmount(int СarbohydratesAmount, int SugarAmount)
+        public override void DetermineSugarAmount()
         {
-
-            CandyType x = CandyType.Chocolate;
-            var k = 0.1;
-
-            switch (x) {
-                case CandyType.Sweetmeat:
-                    k = 0.5;
-                    break;
-                case CandyType.Chocolate:
-                    k = 0.7;
-                    break;
-                case CandyType.Marmalade:
-                    k = 0.9;
-                    break;
+            Console.WriteLine("Введите содержание сахара в %");
+            SugarAmount = Convert.ToInt32(Console.ReadLine());
+            if (SugarAmount > 100)
+            {
+                Console.WriteLine("Содержание сахара не может быть больше 100%, попробуйте еще раз");
+                SugarAmount = Convert.ToInt32(Console.ReadLine());
             }
+            Console.WriteLine("Введите вес конфеты в гр");
+            Weight = Convert.ToInt32(Console.ReadLine()); 
 
-            var c = СarbohydratesAmount * SugarAmount * k;
+            if (SugarAmount > 100)
+            {
+                Console.WriteLine("Содержание сахара не может быть больше 100%");
+            }                      
 
-            Console.WriteLine(c);
+            var Sugar = Weight * SugarAmount / 100;
+
+            Console.WriteLine("В конфете" + Sugar + "гр сахара");
 
             Console.ReadKey();
 

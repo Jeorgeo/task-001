@@ -7,7 +7,8 @@ namespace task_001.Sweets
     public abstract class Sweets
     {
 
-        public abstract void DetermineSugarAmount();        
+        public abstract void DetermineSugarAmount();
+     
 
     }
 }

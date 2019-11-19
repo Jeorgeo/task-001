@@ -18,9 +18,17 @@ namespace task_001.Sweets
 
         protected double PalmOil { get; private set; }
 
-        public override void DetermineSugarAmount() { 
-        
+        public override void DetermineSugarAmount() {
 
+            var СarbohydratesAmount = Convert.ToDouble(Console.ReadLine());
+            var SugarAmount = Convert.ToDouble(Console.ReadLine());
+            var PalmOil = Convert.ToDouble(Console.ReadLine());
+
+            var Sugar = СarbohydratesAmount * SugarAmount * PalmOil;
+
+            Console.WriteLine(Sugar);
+
+            Console.ReadKey();
 
         }
 
