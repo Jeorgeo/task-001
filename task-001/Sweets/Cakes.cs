@@ -6,28 +6,22 @@ namespace task_001.Sweets
 {
     public class Cakes : Sweet
     {
-        public Cakes(string name, int sugarAmount, int weight)
+
+        public int ProductHumiditly { get; set; }
+
+        public Cakes(string name, int totalWeight, int carbohydrates, int sugarAmount, int productHumiditly)
+            : base(name, totalWeight, carbohydrates, sugarAmount)
         {
-            Name = name;
 
-            SugarAmount = sugarAmount;
+            ProductHumiditly = productHumiditly;
 
-            Weight = weight;
         }
-
-        enum CakesType {Сookie, Cake, Waffles};
-
-        public int flourAmount;
-
-        protected int FlourAmount
-        {
-            get; private set;
-        }
-
+                
         public override void DetermineSugar()
         {
-            var c = SugarAmount * Weight * 0.7 / 100;
-            Console.WriteLine(c);
+
+            SugarWeight = TotalWeight * Сarbohydrates * SugarAmount * (150 - ProductHumiditly) / 1000000;
+
         }
 
     }

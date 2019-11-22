@@ -7,22 +7,18 @@ namespace task_001.Sweets
 {
     public class Candies : Sweet
     {
-        public Candies(string name, int sugarAmount, int weight)
+        
+        public Candies(string name, int totalweight, int carbohydrates, int sugarAmount)
+            : base(name, totalweight, carbohydrates, sugarAmount)
         {
-            Name = name;
-
-            SugarAmount = sugarAmount;
-
-            Weight = weight;
 
         }
-
-        enum CandiesType { Alenka, Ledenec, BubleGum };
-
+                                              
         public override void DetermineSugar()
         {
-            var c = SugarAmount * Weight * 0.9 / 100;
-            Console.WriteLine(c);
+
+            SugarWeight = TotalWeight * Сarbohydrates * SugarAmount / 10000;
+
         }
 
     }
