@@ -23,10 +23,10 @@ namespace task_001
 
             for (int i = 0; i < gift.Count; i++)
             {
-                 Sweet sweet = gift[i];
-                 big.Add(sweet);
-                 sweet.DetermineSugar();
-                 Console.WriteLine($"Имя: {sweet.Name} Вес: {sweet.TotalWeight} гр/-сахара {sweet.SugarWeight} гр/" );
+                 Sweet sweet1 = gift[i];
+                 big.Add(sweet1);
+                 sweet1.DetermineSugar();
+                 Console.WriteLine($"Имя: {sweet1.Name} Вес: {sweet1.TotalWeight} гр/-сахара {sweet1.SugarWeight} гр/" );
             }
 
             Console.WriteLine($"Вес подарка {big.GiftWeight} гр");
@@ -37,6 +37,15 @@ namespace task_001
             {
                 Console.WriteLine(foundSweet[i].Name);
             }
+
+            big.OrderBy(x => x.SugarWeight);
+
+            foreach (var item in big)
+            {
+                Console.WriteLine(item.SugarWeight);
+            }
+
+            
 
             Console.ReadKey();
                        

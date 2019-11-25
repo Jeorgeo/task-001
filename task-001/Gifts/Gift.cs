@@ -34,7 +34,7 @@ namespace task_001.Gifts
         {
             candies = candies.OrderBy(comparer).ToList();
         }
-
+    
         public void OrderByDesceding<TResult>(Func<Sweet, TResult> comparer)
         {
             candies = candies.OrderByDescending(comparer).ToList();
