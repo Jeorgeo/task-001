@@ -7,15 +7,25 @@ namespace task_001.Sweets
     public abstract class Sweet
     {
 
-        public string Name { get; set; } // Название сладости
+        // Name sweets
 
-        public int TotalWeight { get; set; } // Полный вес сладости (гр)
+        public string Name { get; set; }
 
-        public int Сarbohydrates { get; set; } // Содержание углеводов в 100 гр продукта (гр)
+        // Full weight sweets (g)
 
-        public int SugarAmount { get; set; } // Содержание сахара в сладости (%)
+        public int TotalWeight { get; set; }
 
-        public int SugarWeight { get; protected set; } // Вес сахара в сладости (гр) 
+        // Amount Carbohydrate per 100 g of sweet
+
+        public int Сarbohydrates { get; set; }
+
+        // Amount of sugar in the sweet (%)
+        
+        public int SugarAmount { get; set; }
+
+        // Sugar weight in the sweet  (гр) 
+
+        public int SugarWeight { get; protected set; } 
 
         public Sweet(string name, int totalWeight, int carbohydrates, int sugarAmount)
         {
@@ -28,6 +38,8 @@ namespace task_001.Sweets
             Сarbohydrates = carbohydrates;
         }
 
-        public abstract void DetermineSugar(); // Вычисление веса сахара в сладости
+        // Calculate Sugar weight in the sweet
+
+        public abstract void DetermineSugar(); 
     }
 }

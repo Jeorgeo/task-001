@@ -43,9 +43,7 @@ namespace task_001
             foreach (var item in big)
             {
                 Console.WriteLine(item.SugarWeight);
-            }
-
-            
+            }            
 
             Console.ReadKey();
                        
